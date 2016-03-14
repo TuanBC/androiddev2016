@@ -1,14 +1,11 @@
-USTH ICT 2016 Android Development
+USTH ICT 2016 - Flickr Client
 =====================================
 
-Students are expected to:
-* Fork this repository to your github account
-* Create new project with Android Studio / Eclipse ADT
-* Append name (and purpose) of your project to this README file
-* Push your commits regularly, with **proper** commit messages
+This is an Android application created to help users connecting to their Flickr accounts, finding the photos using tags and uploading the images on-the-go. 
 
+Group Members:
+ - Nguyen Duc Thang
+ - Nguyen Thi Thu Linh
+ - Nguyen Minh Tuan (155)
 
-Project description
-=====================================
-
-*Add your project description here*
+*Note: The apk file is located inside app/build/outputs/apk/app-debug.apk
