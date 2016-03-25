@@ -3,7 +3,6 @@ package vn.edu.usth.flickr.fragment;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
@@ -17,7 +16,6 @@ import java.util.List;
 
 import vn.edu.usth.flickr.R;
 import vn.edu.usth.flickr.model.Comment;
-import vn.edu.usth.flickr.networking.FlickrFetch;
 
 /**
  * Created by nguye_000 on 3/25/2016.
@@ -53,7 +51,7 @@ public class PhotoPagerFragment extends Fragment{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        new FetchItemsTask().execute();
+        //new FetchItemsTask().execute();
     }
 
     @Override
@@ -73,8 +71,8 @@ public class PhotoPagerFragment extends Fragment{
 
 //        mCommentRecyclerView = (RecyclerView) v.findViewById(R.id.fragment_photo_page_comment_recycler_view);
 //        mCommentRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 3));
-
-        //setupAdapter();
+//
+//        setupAdapter();
 
         return v;
     }
@@ -84,8 +82,8 @@ public class PhotoPagerFragment extends Fragment{
 //            mCommentRecyclerView.setAdapter(new CommentAdapter(mListComments));
 //        }
 //    }
-//
-//
+
+
 //    private class CommentHolder extends RecyclerView.ViewHolder {
 //        private TextView mAuthorNameTextView;
 //        private TextView mContentTextView;
@@ -134,19 +132,19 @@ public class PhotoPagerFragment extends Fragment{
 //        }
 //    }
 //
-    private class FetchItemsTask extends AsyncTask<Void,Void,List<Comment>> {
-
-        @Override
-        protected List<Comment> doInBackground(Void... params) {
-            return new FlickrFetch().fetchComment("flickr.photos.comments.getList", mPhotoId);
-        }
-
-        @Override
-        protected void onPostExecute(List<Comment> listComments) {
-            mListComments = listComments;
-            //setupAdapter();
-        }
-
-    }
+//    private class FetchItemsTask extends AsyncTask<Void,Void,List<Comment>> {
+//
+//        @Override
+//        protected List<Comment> doInBackground(Void... params) {
+//            return new FlickrFetch().fetchComment("flickr.photos.comments.getList", mPhotoId);
+//        }
+//
+//        @Override
+//        protected void onPostExecute(List<Comment> listComments) {
+//            mListComments = listComments;
+//            //setupAdapter();
+//        }
+//
+//    }
 }
 
