@@ -29,8 +29,8 @@ import vn.edu.usth.flickr.networking.ThumbnailDownloader;
  * Created by nguye_000 on 3/23/2016.
  */
 
-public class RecentGalleryFragment extends Fragment {
-    private static final String TAG = "RecentGalleryFragment";
+public class FavoriteGalleryFragment extends Fragment {
+    private static final String TAG = "FavoriteGalleryFragment";
 
     private RecyclerView mPhotoRecyclerView;
     private List<Photo> mListPhotos = new ArrayList<>();
@@ -57,6 +57,7 @@ public class RecentGalleryFragment extends Fragment {
         mThumbnailDownloader.getLooper();
         Log.i(TAG, "Background thread started");
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -158,7 +159,7 @@ public class RecentGalleryFragment extends Fragment {
 
         @Override
         protected List<Photo> doInBackground(Void... params) {
-            return new FlickrFetch().fetchImages("flickr.photos.getRecent");
+            return new FlickrFetch().fetchImages("flickr.interestingness.getList");
         }
 
         @Override
@@ -169,5 +170,6 @@ public class RecentGalleryFragment extends Fragment {
 
     }
 }
+
 
 

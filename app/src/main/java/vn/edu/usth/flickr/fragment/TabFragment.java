@@ -31,7 +31,7 @@ public class TabFragment extends Fragment {
             public Fragment getItem(int position) {
                 switch (position) {
                     case 0 : return new RecentGalleryFragment();
-                    case 1 : return new TrendingGalleryFragment();
+                    case 1 : return new FavoriteGalleryFragment();
                 }
                 return null;
             }
@@ -48,7 +48,7 @@ public class TabFragment extends Fragment {
                     case 0 :
                         return "Recent";
                     case 1 :
-                        return "Trending";
+                        return "Favorite";
                 }
                 return null;
             }
