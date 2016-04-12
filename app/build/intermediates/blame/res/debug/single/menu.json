@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\Android\\AndroidProject\\Flickr\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
+        "source": "D:\\Android\\AndroidProject\\Flickr\\app\\src\\main\\res\\menu\\menu_main.xml"
+    },
+    {
+        "merged": "D:\\Android\\AndroidProject\\Flickr\\app\\build\\intermediates\\res\\merged\\debug\\menu\\drawer_menu.xml",
+        "source": "D:\\Android\\AndroidProject\\Flickr\\app\\src\\main\\res\\menu\\drawer_menu.xml"
+    }
+]
